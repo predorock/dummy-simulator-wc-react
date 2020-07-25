@@ -3,6 +3,11 @@ import React, { useState } from "react";
 export default function DummySimulator() {
   const [investmentValue, setInvestmentValue] = useState(0);
 
+  const style = {
+    display: "flex",
+    "flex-direction": "column"
+  };
+
   function calculateInvestment(v) {
     v = parseFloat(v, 10);
     const value = v + v * 0.042;
@@ -16,7 +21,7 @@ export default function DummySimulator() {
   }
 
   return (
-    <div className="dummy-simulator">
+    <div className="dummy-simulator" style={style}>
       <h1>DummySimulator</h1>
       <input
         type="number"
